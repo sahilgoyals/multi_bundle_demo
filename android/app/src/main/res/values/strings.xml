@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">housing_demo</string>
+    <string name="app_name">Native RN Integration</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="title_activity_pre_login_screen">PreLoginScreen</string>
+    <string name="housing_app_name">HOUSING.com</string>
+    <string name="title_activity_react">RActivity</string>
+    <string name="CodePushDeploymentKey" moduleConfig="true" translatable="false">sYDvLhxOMyXN8KcjMXbYBdpyvKshvm8mzD1dd</string>
+    <string name="CodePushDeploymentKey_news" moduleConfig="true" translatable="false">sYDvLhxOMyXN8KcjMXbYBdpyvKshvm8mzD1dd</string>
+    <string name="CodePushDeploymentKey_android" moduleConfig="true" translatable="false">2vGBHpmM32rxFhalfT2kg9wTDZ_cak59edoN_</string>
 </resources>
