@@ -6,6 +6,7 @@ plugins {
 }
 
 
+apply from: "../../node_modules/@sentry/react-native/sentry.gradle"
 android {
     namespace 'com.example.nativernintegration'
     compileSdk 33
