@@ -10,4 +10,4 @@ sentry.init({ dist: /respective_dist/, ...other_params })
 - The main Android app holds the DSN keys and passes them to the React Native bundles.
 - While attempting to upload source-map files, we utilised different dist values for each of the bundles, allowing us to upload multiple source-maps for the same version of the app.
 
-<img width="421" alt="image" src="/image.png">
+<img alt="image" src="/image.png">
