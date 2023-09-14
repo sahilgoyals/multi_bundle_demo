@@ -9,9 +9,9 @@
     "start": "react-native start",
     "test": "jest",
     "bundleAndroid": "npm run androidCommon:bundle && npm run androidAppA:bundle && npm run androidAppB:bundle",
-    "androidCommon:bundle": "react-native bundle --platform android --dev false --entry-file src/views/common/index.js --bundle-output android/app/src/main/assets/index.common.bundle --assets-dest android/app/src/main/res/ --config metro.common.config.js --sourcemap-output android/app/src/main/assets/index.common.bundle.map",
-    "androidAppA:bundle": "react-native bundle --platform android --dev false --entry-file src/views/appA/index.js --bundle-output android/app/src/main/assets/index.appA.bundle --assets-dest android/app/src/main/res/ --config metro.bundle.config.js --sourcemap-output android/app/src/main/assets/index.appA.bundle.map",
-    "androidAppB:bundle": "react-native bundle --platform android --dev false --entry-file src/views/appB/index.js --bundle-output android/app/src/main/assets/index.appB.bundle --assets-dest android/app/src/main/res/ --config metro.bundle.config.js --sourcemap-output android/app/src/main/assets/index.appB.bundle.map"
+    "androidCommon:bundle": "react-native bundle --platform android --dev true --entry-file src/views/common/index.js --bundle-output android/app/src/main/assets/index.common.bundle --assets-dest android/app/src/main/res/ --config metro.common.config.js --sourcemap-output android/app/src/main/assets/index.common.bundle.map",
+    "androidAppA:bundle": "react-native bundle --platform android --dev true --entry-file src/views/appA/index.js --bundle-output android/app/src/main/assets/index.appA.bundle --assets-dest android/app/src/main/res/ --config metro.bundle.config.js --sourcemap-output android/app/src/main/assets/index.appA.bundle.map",
+    "androidAppB:bundle": "react-native bundle --platform android --dev true --entry-file src/views/appB/index.js --bundle-output android/app/src/main/assets/index.appB.bundle --assets-dest android/app/src/main/res/ --config metro.bundle.config.js --sourcemap-output android/app/src/main/assets/index.appB.bundle.map"
   },
   "dependencies": {
     "@sentry/react-native": "^5.9.1",
