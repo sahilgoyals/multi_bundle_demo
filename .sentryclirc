@@ -1,7 +1,7 @@
 [auth]
-token=
+token=02f1d5fa2435f6229cba50a440f22e3c1c64d915dcd4ea22ca703a95a6ee599a
 
 [defaults]
 url=https://sentry.io/
-project=
-org=
+project=react-native
+org=rahul-test
