@@ -39,6 +39,10 @@ class MyReactApplication : Application(), ReactApplication {
                 return packages
             }
 
+            override fun getJSMainModuleName(): String {
+                return "src/common/index"
+            }
+
 
         }
     override fun getReactNativeHost(): ReactNativeHost = reactNativeHost
