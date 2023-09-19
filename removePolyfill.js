@@ -26,10 +26,14 @@
 
 const lineReplace = require('line-replace')
 
-const bundlePath = './android/app/src/main/assets/index.appB.bundle'
+
+
+const bundlePathArr = ['./android/app/src/main/assets/index.appB.bundle', './android/app/src/main/assets/index.appA.bundle']
+
+bundlePathArr.forEach((path) =>  {
 
 lineReplace({
-  file: bundlePath,
+  file: path,
   line: 1, // assuming that polyfill function will be line 1
   text: '', // remove line 1
   addNewLine: false,
@@ -40,4 +44,5 @@ lineReplace({
       console.error(error);
     }
   }
-});
+})
+})
