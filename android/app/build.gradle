@@ -5,9 +5,32 @@ plugins {
 
 }
 
+project.ext.sentryCli = [
+    logLevel: "debug"
+]
+
 
 apply from: "../../node_modules/@sentry/react-native/sentry.gradle"
+
+//project.ext.react = [
+//        entryFile: "src/common/index.js"
+//    ]
 android {
+
+    signingConfigs {
+        release {
+        storeFile file('/Users/rohitgarg/Workspace/office/multi_bundle_demo/android/keystore')
+            storePassword '123456'
+            keyAlias 'key0'
+            keyPassword '123456'
+        }
+    }
+    tasks.all {
+        if (name.contains("sentry") || name.contains("Sentry")) {
+            enabled = false
+        }
+    }
+
     namespace 'com.example.nativernintegration'
     compileSdk 33
 
@@ -22,6 +45,7 @@ android {
         vectorDrawables {
             useSupportLibrary true
         }
+        signingConfig signingConfigs.release
     }
 
     buildTypes {
@@ -54,6 +78,13 @@ android {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
     }
+}
+
+gradle.projectsEvaluated {
+    def tasksToSkip = project.tasks.matching {
+        it.name.contains("SentryUpload")
+    }
+    tasksToSkip.all { enabled = false }
 }
 
 dependencies {

@@ -26,7 +26,7 @@
 
 const lineReplace = require('line-replace')
 
-const bundlePath = './android/app/src/main/assets/index.android.bundle'
+const bundlePath = './android/app/src/main/assets/index.appB.bundle'
 
 lineReplace({
   file: bundlePath,
